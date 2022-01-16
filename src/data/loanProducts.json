@@ -1,0 +1,42 @@
+[
+    {
+      "id": 1,
+      "title": "Loan Product General",
+      "minAmount": 100,
+      "maxAmount": 10000,
+      "minTerm": 1,
+      "maxTerm": 24,
+      "Annual Interest Rate": 25,
+      "date": "12.12.21"
+    },
+    {
+      "id": 2,
+      "title": "Loan Product 3000",
+      "minAmount": 100,
+      "maxAmount": 3000,
+      "minTerm": 1,
+      "maxTerm": 12,
+      "Annual Interest Rate": 10,
+      "date": "12.12.21"
+    },
+    {
+      "id": 3,
+      "title": "Loan Product 1000",
+      "minAmount": 100,
+      "maxAmount": 1000,
+      "minTerm": 1,
+      "maxTerm": 6,
+      "Annual Interest Rate": 5,
+      "date": "12.12.21"
+    },
+    {
+      "id": 4,
+      "title": "Loan Product для своих",
+      "minAmount": 100,
+      "maxAmount": 20000,
+      "minTerm": 1,
+      "maxTerm": 36,
+      "Annual Interest Rate": 1,
+      "date": "12.12.21"
+    }
+  ]
