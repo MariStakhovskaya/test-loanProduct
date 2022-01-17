@@ -68,6 +68,7 @@ export const App = () => {
 
                 {edit && data.map(el => el.id === id ?
                     <Main id={el.id}
+                          key={el.id}
                           title={el.title}
                           minAmount={el.minAmount}
                           maxAmount={el.maxAmount}
