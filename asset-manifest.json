@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/test-loanProduct/static/css/main.0896bc1f.css",
+    "main.js": "/test-loanProduct/static/js/main.75216a20.js",
+    "static/js/787.73d9b287.chunk.js": "/test-loanProduct/static/js/787.73d9b287.chunk.js",
+    "index.html": "/test-loanProduct/index.html",
+    "main.0896bc1f.css.map": "/test-loanProduct/static/css/main.0896bc1f.css.map",
+    "main.75216a20.js.map": "/test-loanProduct/static/js/main.75216a20.js.map",
+    "787.73d9b287.chunk.js.map": "/test-loanProduct/static/js/787.73d9b287.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0896bc1f.css",
+    "static/js/main.75216a20.js"
+  ]
+}
