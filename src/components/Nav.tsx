@@ -15,19 +15,16 @@ export type dataItem = {
 
 type PropsType = {
     data: Array<dataItem>,
-    setData: (data: Array<dataItem>)=> void
-    show: boolean
     setShow: (show:boolean) => void
     setEdit: (edit:boolean) => void
     findId: (id:number)=>void
-    createProduct?: (title: string, minAmount: number, maxAmount: number, minTerm: number, maxTerm:number, rate: number) => void
 }
 
-export function Nav({data, setData,show, setShow,...props}: PropsType) {
+export const Nav = ({data,setShow,setEdit,...props}: PropsType) => {
 
 const onClickHandlerForCreateProduct = () =>{
     setShow(true)
-    props.setEdit(false)
+    setEdit(false)
 }
     return (
         <nav className="nav">
@@ -39,7 +36,7 @@ const onClickHandlerForCreateProduct = () =>{
                 {data.map((el: dataItem) => {
                     const onclickHandler = (id: number) => {
                         props.findId(id)
-                        props.setEdit(true)
+                        setEdit(true)
                         setShow(false)
                     }
                     return (
@@ -48,14 +45,12 @@ const onClickHandlerForCreateProduct = () =>{
                             <div className="nav-item-product-title">{el.title}</div>
                             <div className="nav-item-product-date">{el.date}</div>
                         </div>
-                        {/*<button onClick={()=>props.editProduct(el.id)}>edit</button>*/}
                     </li>
 
                         )
                 })}
 
             </ul>
-
         </nav>
     )
 }

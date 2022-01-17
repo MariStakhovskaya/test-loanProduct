@@ -10,7 +10,7 @@
 }
 
 body {
-  width: 100%;
+  min-width: 1280px;
   margin: 0 auto;
   font-family: 'Roboto', sans-serif;
   min-height: 100vh;
@@ -32,6 +32,7 @@ body {
   font-size: 24px;
   color: #FFFFFF;
 }
+
 .logo-super{
   font-weight: 400;
 }
@@ -52,12 +53,13 @@ body {
   align-items: center;
   background-color: #E0E0E0;
 }
+
 .nav-btn {
   height: 57px;
   display: flex;
   align-items: center;
-
 }
+
 .nav-btn-product {
   width: 255px;
   height: 36px;
@@ -67,6 +69,7 @@ body {
   font-size: 11px;
   border-radius: 4px;
 }
+
 .nav-btn-product:hover {
   background-color: #2588E3;
 }
@@ -74,9 +77,10 @@ body {
 .nav-list {
   height: 280px;
   overflow-y: scroll;
-  scrollbar-color: #2588E3 #949494;     /* «цвет ползунка» «цвет полосы скроллбара» */
-  scrollbar-width:  thin ;/* толщина */
+  scrollbar-color: #2588E3 #949494;
+  scrollbar-width:  thin ;
 }
+
 .nav-list::-webkit-scrollbar {
   width: 7px;
   background-color: #f9f9fd;
@@ -85,7 +89,6 @@ body {
 .nav-list::-webkit-scrollbar-thumb {
   background-color: #2588E3;
   border-radius: 2em;
-  /*box-shadow: inset 1px 1px 10px #f3faf7;*/
 }
 
 .nav-item {
@@ -125,8 +128,8 @@ body {
   flex-direction: column;
   padding: 0px 25px;
   overflow-y: scroll;
-  scrollbar-color: #2588E3 #949494;     /* «цвет ползунка» «цвет полосы скроллбара» */
-  scrollbar-width:  thin ;/* толщина */
+  scrollbar-color: #2588E3 #949494;
+  scrollbar-width:  thin ;
 }
 
 .section::-webkit-scrollbar {
@@ -138,44 +141,39 @@ body {
   background-color: #2588E3;
   border-radius: 2em;
   height: 2px;
-  /*box-shadow: inset 1px 1px 10px #f3faf7;*/
 }
 
 .section-form {
-  width: 943px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin:20px 0px;
+  margin:20px 0;
 }
+
 .section-title {
   font-weight: bold;
   font-size: 36px;
   line-height: 42px;
   color: black;
-  /*margin:0px 25px;*/
-  padding: 20px 0px;
+  padding: 20px 0;
   border-bottom: 1px solid #E0E0E0;
 }
-.section-form-item {
-  margin-bottom: 30px;
 
+.section-form-item, .section-form-item-name {
+  margin-bottom: 30px;
 }
 
-
-.section-form-item input, .section-form-item-name input{
+.section-form-item input, .section-form-item-name input {
   width: 460px;
   height: 36px;
   color: #959595;
   border: 1px solid #EFEFEF;
-  box-sizing: border-box;
   border-radius: 4px;
   padding: 10px;
 }
 
 .section-form-item-name input {
   width: 943px;
-  margin-bottom: 30px;
 }
 
 .section-form-item input:focus, .section-form-item-name input:focus {
@@ -190,6 +188,7 @@ body {
 }
 
 .section-form-item label, .section-form-item-name label {
+  display: block;
   color: black;
   font-size: 14px;
   margin-bottom: 5px;
@@ -207,5 +206,24 @@ body {
 .error-message {
   color: red;
   font-size: 12px;
+  display: block;
+}
 
+@media (min-width: 1319px) {
+  .section-form {
+    justify-content: start;
+  }
+  .section-form-item {
+    margin-right: 25px;
+  }
+}
+
+@media (max-width: 878px) {
+  .section-form {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .section-form-item-name input {
+    width: 600px;
+  }
 }

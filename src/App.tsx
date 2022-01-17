@@ -5,20 +5,13 @@ import {dataItem, Nav} from "./components/Nav";
 import {Main} from "./components/Main";
 import json from '../src/data/loanProducts.json'
 
-function App() {
+export const App = () => {
 
     const [show, setShow] = useState(false)
     const [edit, setEdit] = useState(false)
     let dataProduct = json
     const [data, setData] = useState(dataProduct)
     const [id, setId] = useState(0)
-
-
-   const findId = (id: number) => {
-        /*setData(data.map(el => el.id === id ? {...el, title: title} : el))*/
-        setId(id)
-        setEdit(true)
-    }
 
 
     const createProduct = (title: string,
@@ -52,9 +45,12 @@ function App() {
             filteredData.maxTerm = maxTerm
             filteredData["Annual Interest Rate"] = rate
             setData([...data])
-
         }
+    }
 
+    const findId = (id: number) => {
+        setId(id)
+        setEdit(true)
     }
 
     return (
@@ -62,13 +58,11 @@ function App() {
             <Header/>
             <main className="main-container">
                 <Nav data={data}
-                     setData={setData}
-                     show={show}
                      setShow={setShow}
                      findId={findId}
                      setEdit={setEdit}
-
                 />
+
                 {edit && data.map(el => el.id === id ?
                     <Main id={el.id}
                           title={el.title}
@@ -90,7 +84,6 @@ function App() {
                                minTerm={0}
                                maxTerm={0}
                                rate={0}
-                               findId={findId}
                                createProduct={createProduct}
                                setShow={setShow}
                                setEdit={setEdit}
