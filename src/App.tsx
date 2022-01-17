@@ -20,8 +20,11 @@ export const App = () => {
                            minTerm: number,
                            maxRate: number,
                            rate: number) => {
+
+
         let newProduct: dataItem = {
-            id: 33, title: title, minAmount: minAmount,
+            id: data.length+1,
+            title: title, minAmount: minAmount,
             maxAmount: maxAmount,
             minTerm: minTerm,
             maxTerm: maxRate,
